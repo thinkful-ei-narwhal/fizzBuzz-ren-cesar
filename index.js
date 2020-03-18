@@ -24,13 +24,13 @@
 // </div>
 // Your function should append the resulting HTML to the .js-results DOM element.
 
-
-//1st get number from form 
+//1st get number from form
 //2nd out put number on div
 //form =  $('number-chooser')
 //input = $('number-choice')
-$('button').click(function(event){
-    event.preventDefault();
-    let outPut= $('input').val();
-    console.log(outPut);
-})
+$('button').click(function(event) {
+  event.preventDefault();
+  let outPut = $('input').val();
+  console.log(outPut);
+  $('.js-results').append(outPut);
+});
