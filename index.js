@@ -32,5 +32,15 @@ $('button').click(function(event) {
   event.preventDefault();
   let outPut = $('input').val();
   console.log(outPut);
-  $('.js-results').append(outPut);
+
+  //$('.js-results').append('<div class="fizz-buzz-item fizzbuzz"></div>');
+  if (outPut % 15 === 0) {
+    $('.js-results').append('<div class="fizz-buzz-item fizzbuzz"></div>');
+    } else if (outPut % 5 === 0) {
+      $('.js-results').append('<div class="fizz-buzz-item buzz"></div>');
+    } else if (outPut % 3 === 0) {
+      $('.js-results').append('<div class="fizz-buzz-item fizz"></div>');
+    }else{
+        $('.js-results').append(outPut);
+    }
 });
